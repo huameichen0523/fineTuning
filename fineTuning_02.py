@@ -270,7 +270,7 @@ def initialize_new_model(model_name, num_classes, feature_extract, use_pretraine
     # Initialize these variables which will be set in this if statement. Each of these
     #   variables is model specific.
     featureExtractor = FeatureExtractor(model_name,use_pretrained)
-    #set_parameter_requires_grad(featureExtractor, feature_extract)
+    set_parameter_requires_grad(featureExtractor, feature_extract)
     model_ft = NewClassifier(featureExtractor)
     input_size = 224
 
